@@ -1,0 +1,27 @@
+   # This is an example METAL script to perform meta-analysis of EWAS data
+
+   MINMAXFREQ ON
+   AVERAGEFREQ ON
+   SCHEME STDERR
+   GENOMICCONTROL ON
+   
+   # Study 1
+   SEPARATOR        COMMA
+   MARKERLABEL      ILMNID   
+   EFFECTLABEL 	    Beta
+   STDERRLABEL      SE
+   PVALUELABEL      P
+   PROCESSFILE      Study1.csv
+
+   # Study 2
+   SEPARATOR        COMMA
+   MARKERLABEL      ILMNID  
+   EFFECTLABEL      Beta
+   STDERRLABEL      SE
+   PVALUELABEL      P
+   PROCESSFILE      Study2.csv
+
+   OUTFILE          METAL_output .txt
+   ANALYZE	    HETEROGENEITY
+   QUIT
+   
